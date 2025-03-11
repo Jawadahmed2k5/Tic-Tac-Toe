@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 300% 300%;
+    animation: gradientBG 8s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    font-size: 2.5rem;
+    color: #ff004f;
+    background: #111;
+    text-shadow: 0px 0px 10px rgba(255, 0, 79, 0.8);
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 79, 0.8);
+}
+
+.box:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#resetbutton, #new-btn {
+    margin-top: 20px;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 81, 47, 0.8);
+}
+
+#resetbutton:hover, #new-btn:hover {
+    box-shadow: 0px 0px 20px rgba(255, 81, 47, 1);
+    transform: scale(1.1);
+}
+
+#msg {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+.msg-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+#heading {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
